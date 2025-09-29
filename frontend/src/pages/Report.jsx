@@ -7,14 +7,12 @@ const Report = () => {
     <>
       <div className='flex'>
         <Navbar/>
-<<<<<<< HEAD
-        <div className=' w-[100px] h-[100vh]'></div>
-        <div className=' bg-gray-100 h-max w-[100vw] mx-30'>
-=======
-        <div className=' w-[100px] h-[100vh] hidden md:block'></div>
-        <div className=' bg-gray-100 h-max w-[100vw] mx-3'>
->>>>>>> 50b826c060e9cfa42c0f137689689c9c58a70495
-        <ReportStatus/>
+        <div className='flex-1 bg-gradient-to-br from-blue-50 to-purple-50 min-h-screen pl-16'> 
+          <div className='container mx-auto px-4 pt-4 shadow-lg rounded-lg bg-white/80'>
+            <div className='border-l-4 border-indigo-500 p-4'> 
+              <ReportStatus/>
+            </div>
+          </div>
         </div>
       </div>
     </>
