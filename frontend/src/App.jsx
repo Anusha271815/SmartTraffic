@@ -6,6 +6,10 @@ import HomePage from './pages/home.jsx'
 import AboutPage from './pages/About.jsx'
 import {BrowserRouter, Routes , Route} from 'react-router-dom';
 import UserPage from './pages/User.jsx'  
+import Login from './components/Login.jsx'
+import  Features from './pages/features.jsx'
+import Contact from './pages/contact.jsx'
+import Terms from './components/TermsAndConditions.jsx'
 
 function App() {
 
@@ -17,6 +21,10 @@ function App() {
         <Route path="/Report" element={<Report/>}/>
         <Route path="/About" element={<AboutPage/>} />
         <Route path="/User" element={<UserPage/>} />
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/features" element={<Features/>}/>
+        <Route path="/contact" element={<Contact/>}/>
+        <Route path="/terms" element={<Terms/>}/>
       </Routes>
     </BrowserRouter>
   )

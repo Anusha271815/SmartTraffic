@@ -9,11 +9,8 @@ import f3 from "../assets/feature3.jpg";
 import f4 from "../assets/feature4.jpeg";
 import f5 from "../assets/feature5.jpeg";
 import f6 from "../assets/feature6.png";
-
-// import React, { useEffect, useState } from "react";
-// import { FaCar, FaAmbulance, FaChartLine, FaRoad } from "react-icons/fa";
-// import { motion } from "framer-motion";
-// import traffic from "../assets/traffic1.jpeg";
+import LandingPageNavbar from "../components/LandingPageNavbar";
+import Footer from "../components/Footer";
 
 // Simple counter hook
 const useCounter = (end, duration = 2000) => {
@@ -159,10 +156,12 @@ const HomePage = () => {
 
 
   return (
+    <div>
+    <LandingPageNavbar/>
     <div className="overflow-x-hidden bg-gradient-to-b from-blue-50 to-white text-gray-800">
       {/* Hero Section */}
  <section 
-  className="relative text-center py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 text-white min-h-[60vh] sm:min-h-[70vh] lg:h-[85vh] overflow-hidden flex items-center justify-center"
+  className="relative text-center py-12 sm:py-16 md:py-20 lg:py-24 lg:pt-40 px-4 sm:px-6 lg:px-8 text-white min-h-[60vh] sm:min-h-[70vh] lg:h-[85vh] overflow-hidden flex items-center justify-center"
   style={{
     backgroundImage: `linear-gradient(rgba(59, 130, 246, 0.3), rgba(64, 67, 75, 0.7)), url(${traffic})`
   }}
@@ -276,7 +275,7 @@ const HomePage = () => {
       </section>
 
       {/* Features Section */}
-<section className="py-20 px-6 w-full max-w-[350px] sm:max-w-[600px] md:max-w-[900px] lg:max-w-[1100px] mx-auto">
+<section id="features" className="py-20 px-6 w-full max-w-[350px] sm:max-w-[600px] md:max-w-[900px] lg:max-w-[1100px] mx-auto">
 
   <motion.h2
     initial={{ opacity: 0, y: -30 }}
@@ -356,34 +355,8 @@ const HomePage = () => {
         </button>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-blue-900 text-gray-300 py-8 px-6 mt-12">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="text-white font-semibold mb-2">Smart Traffic System</h3>
-            <p className="text-sm">
-              An innovative solution to make Indian roads safer, efficient, and
-              eco-friendly using smart technologies.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-white font-semibold mb-2">Quick Links</h3>
-            <ul className="text-sm space-y-2">
-              <li><a href="/dashboard" className="hover:text-white">Dashboard</a></li>
-              <li><a href="#" className="hover:text-white">Features</a></li>
-              <li><a href="#" className="hover:text-white">About</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-white font-semibold mb-2">Contact</h3>
-            <p className="text-sm">📧 info@smarttraffic.in</p>
-            <p className="text-sm">📍 New Delhi, India</p>
-          </div>
-        </div>
-        <p className="text-center text-xs text-gray-400 mt-6">
-          © {new Date().getFullYear()} Smart Traffic System. All rights reserved.
-        </p>
-      </footer>
+    <Footer/>
+    </div>
     </div>
   );
 };
